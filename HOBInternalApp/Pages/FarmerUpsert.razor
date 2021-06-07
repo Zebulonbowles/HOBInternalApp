@@ -1,0 +1,31 @@
+﻿@page "/farmer/create"
+@using Models
+<h3>FarmerUpsert</h3>
+
+<div class="row mt-2 mb-5">
+    <h3 class="card-title text-info mb-3 ml-3">Create Farmer</h3>
+    <div class="col-md-12">
+        <div class=card"">
+            <div class="card-body">
+                <EditForm Model="FarmerDTO">
+                    <div class="form-group">
+                        <label>Farm Name</label>
+                        <input type="text" />
+                        <InputText @bind-Value="FarmerDTO.FarmName" class="form-control"></InputText>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Farm Name</label>
+                        <input type="text" />
+                        <InputText @bind-Value="FarmerDTO.FarmName" class="form-control"></InputText>
+                    </div>
+
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    private FarmerDTO FarmerDTO { get; set; } = new FarmerDTO();
+    private string Title { get; set; } = "Create";
+}
