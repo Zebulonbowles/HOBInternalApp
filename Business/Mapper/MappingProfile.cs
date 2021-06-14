@@ -15,6 +15,17 @@ namespace Business.Mapper
         {
             CreateMap<AddressDTO, Address>();
             CreateMap<Address, AddressDTO>();
+
+            CreateMap<EmployeeDTO, Employee>();
+            CreateMap<Employee, EmployeeDTO>();
+
+            CreateMap<PersonDTO, Person>();
+            CreateMap<Person, PersonDTO>();
+
+            CreateMap<FarmerDTO, Farmer>();
+            CreateMap<Farmer, FarmerDTO>();
+
+
         }
     }
 }

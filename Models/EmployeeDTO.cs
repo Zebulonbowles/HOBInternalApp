@@ -13,7 +13,7 @@ namespace Models
         [Key]
         public int EmployeeId { get; set; }
         [Required]
-        public Person EmployeePersonalInfo { get; set; }
+        public PersonDTO EmployeePersonalInfo { get; set; }
         [Required]
         public string JobTitle { get; set; }
         [Required]

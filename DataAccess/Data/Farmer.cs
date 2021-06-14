@@ -11,6 +11,7 @@ namespace DataAccess.Data
     {
         public int Id { get; set; }
         public string FarmName { get; set; }
+        [ForeignKey("Id")]
         public Address FarmAddress { get; set; }
 
         [ForeignKey("Id")]

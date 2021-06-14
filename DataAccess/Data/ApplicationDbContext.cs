@@ -18,5 +18,7 @@ namespace DataAccess.Data
         public DbSet<Person> People { get; set; }
         public DbSet<Farmer> Farmers { get; set; }
         public DbSet<Employee> Employees { get; set; }
+
+        
     }
 }

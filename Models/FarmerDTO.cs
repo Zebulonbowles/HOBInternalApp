@@ -15,6 +15,6 @@ namespace Models
         public Address FarmAddress { get; set; }
 
         [ForeignKey("Id")]
-        public Person ContactPerson { get; set; }
+        public PersonDTO ContactPerson { get; set; }
     }
 }
