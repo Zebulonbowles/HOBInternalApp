@@ -18,7 +18,13 @@ namespace DataAccess.Data
         public DbSet<Person> People { get; set; }
         public DbSet<Farmer> Farmers { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<BiomassBatch> BiomassBatches { get; set; }
+        public DbSet<DistillateBatch> DistillateBatches { get; set; }
+        public DbSet<BiomassExtraction> BiomassExtractions { get; set; }
+        public DbSet<Distillation> Distillations { get; set; } 
+        public DbSet<CrudeBatch> CrudeBatches { get; set; }
 
-        
+
     }
 }

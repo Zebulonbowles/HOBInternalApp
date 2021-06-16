@@ -26,5 +26,7 @@ namespace DataAccess.Data
         [StringLength(2)]
         public string Country { get; set; }
 
+        
+
     }
 }

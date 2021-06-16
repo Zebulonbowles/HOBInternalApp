@@ -15,11 +15,20 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" />
+                        <InputText @bind-Value="FarmerDTO.FarmAddress" class="form-control"></InputText>
+                    </div>
+                    <div class="form-group">
                         <label>Farm Name</label>
                         <input type="text" />
-                        <InputText @bind-Value="FarmerDTO.FarmName" class="form-control"></InputText>
+                        <InputNumber @bind-Value="FarmerDTO.FarmZip" class="form-control"></InputNumber>
                     </div>
-
+                    <div class="form-group">
+                        <button class="btn btn-primary">@Title Farmer</button>
+          
+                        <NavLink href="farmer" class="btn btn-secondary">Back To Index</NavLink>
+                    </div>
                 </EditForm>
             </div>
         </div>
@@ -27,5 +36,6 @@
 </div>
 @code {
     private FarmerDTO FarmerDTO { get; set; } = new FarmerDTO();
+     
     private string Title { get; set; } = "Create";
 }

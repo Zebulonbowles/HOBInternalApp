@@ -12,14 +12,16 @@ namespace DataAccess.Data
     {
         [Key]
         public int Id { get; set; }
+        public int FarmerId { get; set; }
         [StringLength(50)]
         public string Strain { get; set; }
         public int Weight { get; set; } 
         public bool IsMilled { get; set; }
         public double MoistureContent { get; set; }
+
         [Required]
-        [ForeignKey ("Id")]
-        public Farmer FarmerInfo { get; set; }
+        [ForeignKey ("FarmerId")]
+        public virtual Farmer FarmerInfo { get; set; }
         
     }
 }

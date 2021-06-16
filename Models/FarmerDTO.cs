@@ -12,9 +12,11 @@ namespace Models
     {
         public int Id { get; set; }
         public string FarmName { get; set; }
-        public Address FarmAddress { get; set; }
-
-        [ForeignKey("Id")]
-        public PersonDTO ContactPerson { get; set; }
+        public string FarmAddress { get; set; }
+        public string FarmCity { get; set; }
+        public int FarmZip { get; set; }
+        public string FarmContactPersonFirstName { get; set; }
+        public string FarmContactPhone { get; set; }
+        public int ContactPersonId { get; set; }
     }
 }

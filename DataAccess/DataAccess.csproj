@@ -5,11 +5,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20210607150843_CreateDatabase.cs" />
+    <Compile Remove="Migrations\20210607150843_CreateDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210607150946_AddAddresses.cs" />
+    <Compile Remove="Migrations\20210607150946_AddAddresses.Designer.cs" />
+    <Compile Remove="Migrations\20210607152419_AddPeople.cs" />
+    <Compile Remove="Migrations\20210607152419_AddPeople.Designer.cs" />
+    <Compile Remove="Migrations\20210607153934_AddFarmers.cs" />
+    <Compile Remove="Migrations\20210607153934_AddFarmers.Designer.cs" />
+    <Compile Remove="Migrations\20210607161119_AddEmployees.cs" />
+    <Compile Remove="Migrations\20210607161119_AddEmployees.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -13,8 +13,8 @@ namespace DataAccess.Data
         [Required]
         public int Id { get; set; }
         public string JulianId { get; set; }
+        public int BiomassExtractionId { get; set; }
         public string CoaURL { get; set; }
-        [ForeignKey("Id")]
         public bool IsDecarboxylated { get; set; }
         public bool IsWinterized { get; set; }
         public bool IsTested { get; set; }
@@ -22,7 +22,7 @@ namespace DataAccess.Data
         public bool IsHotScrubbed { get; set; }
         public string Qr { get; set; }
 
-        [ForeignKey("Id")]
+        [ForeignKey("BiomassExtractionId")]
         public BiomassExtraction ExtractionBatchSource { get; set; }
     }
 }

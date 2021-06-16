@@ -12,15 +12,27 @@ namespace DataAccess.Data
     {
         [Key]
         public int Id { get; set; }
-        [Required]
-        [ForeignKey("Id")]
-        public Employee Employee { get; set; }
-        [Required]
-        [ForeignKey("Id")]
-        public CrudeBatch CrudeBatch { get; set; }
-        public DateTime DateTime { get; set; }
+
+        public int EmployeeId { get; set; }
+
+        public int CrudeBatchId { get; set; }
+
+        public DateTime DateTimeStart { get; set; }
+
+        public DateTime DateTimeEnd { get; set; }
+
         public int CrudeInputWeight { get; set; }
+
         public int OutpoutMains { get; set; }
+
         public int OutputHeadsTails { get; set; }
+
+        [Required]
+        [ForeignKey("EmployeeId")]
+        public virtual Employee Employee { get; set; }
+
+        [Required]
+        [ForeignKey("CrudeBatchId")]
+        public virtual CrudeBatch CrudeBatch { get; set; }
     }
 }

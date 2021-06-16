@@ -22,8 +22,11 @@ namespace Business.Mapper
             CreateMap<PersonDTO, Person>();
             CreateMap<Person, PersonDTO>();
 
-            CreateMap<FarmerDTO, Farmer>();
-            CreateMap<Farmer, FarmerDTO>();
+            CreateMap<FarmerDTO, Farmer>().
+                ForMember(d => d.FarmAddress.Address1, opt=> opt.MapFrom(s => s.FarmAddress)).
+                ForMember(d => d.ContactPerson.FirstName, opt=> opt.MapFrom(s=>s.FarmContactPersonFirstName)).
+                ForMember(d => d.FarmPhone, opt => opt.MapFrom(s => s.FarmContactPhone)).ReverseMap();
+    
 
 
         }

@@ -13,11 +13,11 @@ namespace DataAccess.Data
         [Key]
         public int Id { get; set; }
         public string JulianBatchId { get; set; }
-        [ForeignKey("Id")]
+        public int SourceDistillationId { get; set; } 
         public bool IsDegummed { get; set; }
         public string Qr { get; set; }
-        [Required]
-        [ForeignKey("Id")]
+
+        [ForeignKey("SourceDistillationId")]
         public Distillation SourceDistillation { get; set; }
         public bool IsTested { get; set; }
        

@@ -8,18 +8,29 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Data
 {
-    public class Employee 
+    public class Employee
     {
         [Key]
         public int EmployeeId { get; set; }
+        public int PersonalInfoId { get; set; }
+
         [Required]
-        [ForeignKey("Id")]
-        public Person EmployeePersonalInfo {get;set;}
+        [ForeignKey("PersonalInfoId")]
+        public Person EmployeePersonalInfo { get; set; }
+
         [Required]
         public string JobTitle { get; set; }
+
         [Required]
         public DateTime DateHired { get; set; }
+
         public DateTime UpdatedOn { get; set; }
+
+        public virtual List<Distillation> EmployeeDistillations {get; set;}
+
+        public virtual List<BiomassExtraction> EmployeeExtractions { get; set; }
+       
+
 
     }
 }
